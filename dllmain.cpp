@@ -4,7 +4,21 @@
 #include "memory.h"
 #include <string>
 #include <iostream>
+#include <process.h>
 #include <vector>
+
+// FindDMAAddy - A fucntions to make it easier to handle mulilevel pointers
+// Exist on several sites, think original creator can be found here: https://guidedhacking.com/threads/finddmaaddy-c-multilevel-pointer-function.6292/
+uintptr_t FindDMAAddy(uintptr_t ptr, std::vector<unsigned int> offsets)
+{
+  uintptr_t addr = ptr;
+  for (unsigned int i = 0; i < offsets.size(); ++i)
+  {
+    addr = *(uintptr_t*)addr;
+    addr += offsets[i];
+  }
+  return addr;
+}
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved) {
   switch (ul_reason_for_call) {
