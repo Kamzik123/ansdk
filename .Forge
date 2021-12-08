@@ -1,0 +1,5 @@
+# Forge files
+
+Forge {
+ char[8] magic; // "scimitar"
+}
