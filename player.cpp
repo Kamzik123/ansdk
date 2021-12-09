@@ -11,3 +11,11 @@ namespace lambdasdk {
     }
   }
 }
+
+Struct player {
+// 0x00 - pointer?
+// 0x04
+// 0x08
+
+
+}
