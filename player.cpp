@@ -1,21 +1,31 @@
-namespace lambdasdk {
-  namespace player {
-    
-    // Returns the current health (0-200)
-    // No Need for an internal function we use pointers to the address right away instead.
-    int GetHealth() {
-      DWORD BaseAddress = (DWORD)GetModuleHandle(L"AC4BFSP.exe") + 0x049DF788;
-      uintptr_t PlayerHealthAddress = FindDMAAddy(BaseAddress, { 0x34, 0x84 });
-    
-      return *(int*)PlayerHealthAddress;
-    }
-  }
+struct player() {
+int unknown1; // Dissects says pointer but cant confirm.
+int unkown2;  // Not tested
+int unkown3; // Affects healthbar, note that i cant confirm the size of this yet
+//.......
+int health // 0-200 could be an unsigned int. Unclear if it's 4 or 2 bytes
+int health 2 // 0-200 Used as comparison in sethealth function but never really changes? 
 }
 
-Struct player {
-// 0x00 - pointer?
-// 0x04
-// 0x08
 
+// Doodles below
+// Far From complete
+Offset: 08  - HUD - HEALTHBAR Some sort of z-order value? 0 = hidden 100+ and it shows in menus aswell. Jumps all over // byte
+Offset 84 - Health 0-200 // 2 or 4 bytes?
+Offset 88 - Max Health(?) // it's used for something in health.
+Offset: 0288 - Wanted level of some sort, it only affects 1st wanted level for some reason // byte
+Offset: 041C - X/Y (?) // float
+Offset: 0408 Z?  // float
+Offset: 0034 // 0 = health bar shows - 10000 it's hidden (cut off at 2099) - So flag? Or not a 4-byte type
 
-}
+Offset: 808 1 when running, 0 otherwise
+Offset: 894 changes when using scrollwheel
+Offset: 824 When idle 1 Otherwise: 0 when aiming
+Offset: 89C When aiming: 72 otherwise 0
+0ffset: 6E8 3/4 When aiming with gun. unkown size
+0ffset: 8F8: 0 - Normal - 164 When Hidden
+Offset: 900: 0 Normal Hit/Hold Left shift = 42
+Offset: 7C0 2 when aiming at npc - 0 otherwise <- modifies ui rectile
+Offset: 7BC 2 when aiming at npc - 0 otherwise
+Offset: 8CC 0 when hidden 1 otherwise
+Offset: 524 4 when in menu
