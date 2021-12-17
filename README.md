@@ -1,7 +1,7 @@
 # ansdk
 Assasins Creed Black Flag SinglePlayer Modification SDK 
 
-Complete modding sdk under work.
+Complete modding sdk under work. This project does not modify any game files and does not contain any code from the game itself.
 
 Anyone can contribute and is encouraged to do so.
 
