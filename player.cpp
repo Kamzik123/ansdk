@@ -1,10 +1,6 @@
+// The base pointer is still disputed
 struct player() {
-int unknown1; // Dissects says pointer but cant confirm.
-int unkown2;  // Not tested
-int unkown3; // Affects healthbar, note that i cant confirm the size of this yet
-//.......
-int health // 0-200 could be an unsigned int. Unclear if it's 4 or 2 bytes
-int health 2 // 0-200 Used as comparison in sethealth function but never really changes? 
+// will update in a bit
 }
 
 
