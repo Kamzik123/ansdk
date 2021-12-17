@@ -6,6 +6,7 @@ Complete modding sdk under work.
 Anyone can contribute and is encouraged to do so.
 
 Play nice follow some simple rules:
+
 1.Do not upload any decompiled code (unless it's your own work and not something generated) or any assets from any game. 
 
 2.Do not upload any code that modifies or intend to modify the launcher, any drm or online services.
