@@ -3,7 +3,7 @@ Assasins Creed Black Flag Modification SDK
 
 Complete modding sdk under work.
 
-Anyone can contribute and is encouraged to do so, but keep in mind that the license is Unlicense so anything in here is up for grabs even without any attribution to the original creator.
+Anyone can contribute and is encouraged to do so.
 
 Play nice follow some simple rules:
 Do not upload any decompiled code (unless it's your own work and not something generated) or any assets from any game. 
