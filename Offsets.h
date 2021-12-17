@@ -6,6 +6,7 @@
 #ifndef OFFSETS_H
 #define OFFSETS_H
 
+// NOTE: Only add patterns you can confirm works.
 namespace Offsets {
   
   // Pattern, mask..there is problaby a cleaner way doing this but whatever...works for our purposes and cpp check wont cry about defines.
