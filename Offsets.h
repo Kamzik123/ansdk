@@ -2,6 +2,7 @@
 | License: Unlicense, do what you want with it.
 | Created by: Lambdarevolution(at)gmail.com / 2021-12-17
 | Description: Named offsets but in reality they are patterns as i dont trust static offsets, unless i really have too even old games might get a suprise update...
+|  Might split this up later as some static offsets will be required.
 */
 #ifndef OFFSETS_H
 #define OFFSETS_H
