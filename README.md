@@ -8,4 +8,8 @@ Complete modding sdk under work. This project does not modify any game files. An
 
 - **Do not upload any code that modifies or intend to modify the launcher, any drm or online services!**
 
+- ** No decompiled code is allowed, you may only add your own original work**
+
+
 Repository will be updated in a bit, im a bit messy and dont want to clutter the repo with my garbage doodles and tests.
+
