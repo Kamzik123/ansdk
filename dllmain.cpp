@@ -1,26 +1,20 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
-// Will be updated in a bit
 #include "pch.h"
-#include "memory.h"
+
 #include <string>
 #include <iostream>
 #include <process.h>
+#include <stdlib.h>
 #include <vector>
 
+#include "Log.h"
+#include "Hooks.h"
+#include "memory.h"
+#include "offsets.h"
 
-// Create Hooks Should not be here...
-bool CreateHooks() {
-if(
-  MH_CreateHook((PVOID*)memory::find_signature(0, SetPlayerHealthPattern), &SetPlayerHealthOverride, reinterpret_cast<void**>(&ansdk::oSet_Player_Health)) &&
-  MH_CreateHook((PVOID*)memory::find_signature(0, Offsets::ShipHealth[0], Offsets::ShipHealth[1]), &ShipHealthOverride, reinterpret_cast<void**>(&ansdk::oship_health))
-  != MH_OK) {
-  std::cout << "ERROR: One or more hooks could not be created." << std::endl;
-    return false;
-  }
-  std::cout << "All hooks created succesfully." << std::endl;
-return true;
+namespace ansdk {
+// empty
 }
-
 
 // Update Function, be careful not tied to game frames.
 unsigned int __stdcall Update(void* data) {
@@ -51,6 +45,7 @@ unsigned int __stdcall Update(void* data) {
   }
 }
 
+
 // OnLoad Called when we get attached to the game.
 unsigned int __stdcall OnLoad(void* data) {
 
@@ -66,6 +61,7 @@ unsigned int __stdcall OnLoad(void* data) {
   std::cout << "| ANSDK Started." << std::endl;
   std::cout << "==================================" << std::endl << std::endl;
 
+#endif
   // call the log so it get a fresh file.
   Log::getInstance()->log(Log::Note, "SDK started");
 
@@ -76,32 +72,37 @@ unsigned int __stdcall OnLoad(void* data) {
   }
   else {
     Log::getInstance()->log(Log::Note, "MinHook initialized.");
+#ifdef _DEBUG
     std::cout << "================================================" << std::endl;
     std::cout << "| MinHook initialized...Calling CreateHooks()" << std::endl;
     std::cout << "================================================" << std::endl << std::endl;
+#endif
 
-    if (CreateHooks()) {
+    if (hooks::CreateHooks()) {
       if (MH_EnableHook(MH_ALL_HOOKS) != MH_OK) {
-        std::cout << "Failed to start hooks...";
+#ifdef _DEBUG
+        std::cout << "Failed to start all hooks...";
+#endif
       }
       else {
+#ifdef _DEBUG
         std::cout << std::endl << std::endl;
         std::cout << "All hooks enabled." << std::endl;
         std::cout << "=====================[All done ANSDK ready]===============" << std::endl << std::endl << std::endl;
+#endif
       }
     }
-#endif // DEBUG
     _beginthreadex(NULL, 0, &Update, NULL, 0, NULL);
 
     // Onload thread ends here.
   }
   return 0;
 }
-
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved) {
+  
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
   switch (ul_reason_for_call) {
     case DLL_PROCESS_ATTACH:
-      _beginthreadex(NULL, 0, &OnLoad, NULL, 0, NULL); // Run in a new thread to not hog the main.
+      _beginthreadex(NULL, 0, &OnLoad, NULL, 0, NULL);
       break;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
@@ -110,3 +111,4 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     }
     return TRUE;
 }
+
