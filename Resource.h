@@ -7,6 +7,7 @@
 #define RESOURCE_H
 
 #include <stdint.h>
+
 class resource {
 public:
   int32_t resourcetype; //0x0000
