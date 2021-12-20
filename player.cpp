@@ -1,7 +1,7 @@
 /*
 | License: Unlicense, do what you want with it.
 | Created by: Lambdarevolution(at)gmail.com / 2021-12-17
-| Description: Player struct....
+| Description: Player struct.....
 */
 // The base pointer is still disputed
 struct player() {
