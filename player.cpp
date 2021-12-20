@@ -9,7 +9,7 @@ struct player() {
 }
 
 
-// Doodles below
+// Doodles below ignore most of this
 // Far From complete, might be wrong base, even tho it still a valid pointer that can be used for the real base
 Offset: 08  - HUD - HEALTHBAR Some sort of z-order value? 0 = hidden 100+ and it shows in menus aswell. Jumps all over // byte
 Offset 84 - Health 0-200 // 2 or 4 bytes?
