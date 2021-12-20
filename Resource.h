@@ -1,7 +1,7 @@
 /*
 | License: Unlicense
 | Created by: Lambdarevolution(at)gmail.com / 2021-12-20
-| Description: resource class.
+| Description: resource class. Alot of unknown variables.
 */
 #ifndef RESOURCE_H
 #define RESOURCE_H
