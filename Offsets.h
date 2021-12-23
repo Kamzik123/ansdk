@@ -1,4 +1,4 @@
-
+/*
 | License: Unlicense
 | Created by: Lambdarevolution(at)gmail.com / 2020-04-01
 | Description: Named offsets but in reality they are patterns as i dont trust static offsets, unless i really have too..
