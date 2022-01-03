@@ -1,4 +1,6 @@
-Resource structure:
+# Resource structure 
+
+Size: 40bytes
 
 | Type  | Name |
 | ------------- | ------------- |
