@@ -12,3 +12,6 @@ Size unknown;
 | 0x27E | IsPlayerHidden(?) | byte | 
 | 0x580 | Interaction icon | pointer | 
 | 0x8CC | IsPlayerVisible | byte |
+
+
+
