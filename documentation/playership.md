@@ -10,4 +10,6 @@ Size unknown;
 |  0x88  | Max health(?) | float |
 
 
+- Speedmodes: 0-3 (0 anchor, 3 fast travel)
+
 
