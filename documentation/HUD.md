@@ -1,5 +1,9 @@
 # Hud states and types
 
+Hud object size: 0x140 | 320bytes
+
+ID | 0 | HUD_VISIBLE_STATE | 0 | 0 | .....
+
 - HUD_PLAYER_STATE 
 - HUD_WEAPON_INDICATOR 
 - HUD_NAVAL_SAILS 
