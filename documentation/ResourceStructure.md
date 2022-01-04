@@ -4,14 +4,14 @@ Size: 40bytes
 
 | Type  | Name |
 | ------------- | ------------- |
-| int32_t   | unkown  |
+| int32_t   | unknown  |
 | int32_t   | resourceid  |
 | char[4]   | unknown  |
 | int32_t   | amount  |
 | char[24]   | unknown  |
 
 
-Notes: This is still a guessed structure. Sizes have not been confirmed yet.
+Notes: First unknown might be some sort of id.
 
 Resource id's:
 
