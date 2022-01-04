@@ -11,7 +11,7 @@ Size unknown;
 | 0x138 | HUD_PLAYER_STATE | byte |
 | 0x40C | x(or)y-position | float |
 | 0x408 | x(or)y-position | float |
-| 0x410 | Z-position | float |
+| 0x410 | z-position | float |
 | 0x27E | IsPlayerHidden(?) | byte | 
 | 0x580 | Interaction icon | pointer | 
 | 0x8CC | IsPlayerVisible | byte |
