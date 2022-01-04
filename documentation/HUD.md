@@ -25,4 +25,4 @@ ID | 0 | HUD_VISIBLE_STATE | 0 | 0 | .....
 | 2   | Transition  |
 | 3   | Visible  |
 | 4   | Hidden  |
-| 7 |  hidden(?) |
+| 7 |  Hidden(?) |
