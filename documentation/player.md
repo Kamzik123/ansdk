@@ -12,6 +12,9 @@ Size unknown;
 | 0x27E | IsPlayerHidden(?) | byte | 
 | 0x580 | Interaction icon | pointer | 
 | 0x8CC | IsPlayerVisible | byte |
-
+| 0x212C | SelectedGadget1 | byte | 
+| 0x2124 | SelectedGadget2 | byte | 
+| 0x8F8 | Action_Button_Text | byte | 
+| 0x08CC | SwordsVisible | byte | 
 
 
