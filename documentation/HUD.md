@@ -17,4 +17,12 @@ ID | 0 | HUD_VISIBLE_STATE | 0 | 0 | .....
 - HUD_TUTORIALS 
 - HUD_UPDATES
 
-Will update with hud states.
+## Hud states
+| Value  | Name |
+| ------------- | ------------- |
+| 0  | Not used   |
+| 1   | Not visible  |
+| 2   | Transition  |
+| 3   | Visible  |
+| 4   | Hidden  |
+| 7 |  hidden(?) |
