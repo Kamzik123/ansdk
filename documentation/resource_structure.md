@@ -14,6 +14,7 @@ Size: 40bytes
 Notes:
 - First unknown might be some sort of base type id. Almost always 40477080 but also 40686384.
 - Second unknown affects your savegame.
+- Last 24 bytes of padding are almost always 0
 
 Resource id's:
 
