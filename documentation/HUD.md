@@ -25,4 +25,5 @@ ID | 0 | HUD_VISIBLE_STATE | 0 | 0 | .....
 | 2   | Transition  |
 | 3   | Visible  |
 | 4   | Hidden  |
+| 6   | Disabled in settings  |
 | 7 |  Hidden(?) |
