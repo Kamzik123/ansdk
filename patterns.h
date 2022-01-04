@@ -8,6 +8,8 @@
 
 namespace Patterns {
 // Will add them soon...
+ 
+// const char* GetWeaponNameFromType(int,int)  "\x55\x8B\xEC\x8B\x45\x08\x83\xF8\x22", xxxxxxxxx
 
 }   
 
